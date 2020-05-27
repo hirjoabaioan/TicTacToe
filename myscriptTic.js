@@ -10,12 +10,13 @@ var box9 = document.querySelector("#nine");
 
 
 var all = document.querySelectorAll("td");
+var board = $("table tr")
 
 var restart = document.querySelector("#but");
 
 function clearBoxes(){
-    for(var i=0; i < all.length; i++){
-        all[i].textContent = '';
+    for(var i=0; i < board.length; i++){
+        board[i].textContent = '';
     }
 }
 
@@ -45,8 +46,8 @@ function boxChange(){
 
 
 
-for (var i=0; i<all.length;i++){
-    all[i].addEventListener('click', boxChange);
+for (var i=0; i<9; i++){
+    board[i].addEventListener('click', boxChange);
     check(); 
 }
 
